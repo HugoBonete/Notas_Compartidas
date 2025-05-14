@@ -1,5 +1,13 @@
 <section>
     <p *ngIf="!noteExist">Crea tu primera nota!!</p>
+    <form *ngIf="noteExist" class="search-form">
+        <span>Buscar notas por:</span>
+        <input type="text" name="search" placeholder="Título o descripción" [(ngModel)]="search"/>
+        <span>Fechas entre:</span>
+        <input type="date" name="start-date" [(ngModel)]="startDate">
+        <input type="date" name="end-date" [(ngModel)]="endDate">
+      </form>
+      
   
     <form class="note-form" (ngSubmit)="addNote()">
         <label for="title">Título:</label>
@@ -15,7 +23,7 @@
     </form>
   
     <div class="notes">
-      @for (note of notes; track note.id) {
+      @for (note of filterednotes; track note.id) {
         <div class="note-card">
           <h3>{{ note.title }}</h3>
           <p>{{ note.desc }}</p>

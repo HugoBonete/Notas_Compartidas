@@ -35,4 +35,22 @@ export class NotesComponent {
     this.note.desc = '';
     this.note.date = '';
   }
+
+  search : string = "";
+  startDate : string = "";
+  endDate : string = "";
+
+  get filterednotes()
+  {
+    return this.notes.filter(note =>
+    {
+      let text = this.search == "" || note.title.toLowerCase().includes(this.search.toLowerCase());
+      let date = new Date(note.date);
+      let start = (this.startDate) ? new Date(this.startDate) : null;
+      let end = (this.endDate) ? new Date(this.endDate) : null;
+      let okDate = ((!start || date >= start) && (!end || date <= end));
+      return okDate && text;
+    }
+    )
+  }
 }

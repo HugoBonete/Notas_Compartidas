@@ -8,7 +8,6 @@ section {
     font-family: Arial, sans-serif;
   }
   
-  /* Formulario visualmente separado */
   .note-form {
     display: flex;
     flex-direction: column;
@@ -22,7 +21,6 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   }
   
-  /* Inputs y textarea */
   .note-form input,
   .note-form textarea {
     padding: 10px 12px;
@@ -35,14 +33,12 @@ section {
     max-width: 100%;
   }
   
-  /* Evitar que textarea se expanda horizontalmente */
   .note-form textarea {
     resize: vertical;
     min-height: 80px;
     max-width: 100%;
   }
   
-  /* Botón bonito */
   .note-form button {
     padding: 10px;
     font-size: 1em;
@@ -58,7 +54,6 @@ section {
     background-color: #45a049;
   }
   
-  /* Contenedor de las notas */
   .notes {
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +62,6 @@ section {
     padding-top: 10pt;
   }
   
-  /* Tarjeta individual */
   .note-card {
     background-color: #ffffff;
     border-radius: 12px;
@@ -102,5 +96,44 @@ section {
     color: #777;
     font-size: 0.85em;
     align-self: flex-end;
+  }
+  
+  .search-form {
+    display: flex;
+    flex-direction: row; /* Cambiar la dirección de los elementos a horizontal */
+    gap: 12px; /* Espaciado entre los elementos */
+    margin: 20px 0;
+    padding: 16px;
+    width: 100%;
+    max-width: 600px; /* Puedes ajustar el ancho máximo si es necesario */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-between; /* Asegura que los elementos se distribuyan */
+  }
+  
+  .search-form input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 60%; /* Hace que el input ocupe más espacio */
+    box-sizing: border-box;
+  }
+  
+  .search-form button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%; /* Hace que el botón ocupe el espacio restante */
+  }
+  
+  .search-form button:hover {
+    background-color: #45a049;
   }
   
