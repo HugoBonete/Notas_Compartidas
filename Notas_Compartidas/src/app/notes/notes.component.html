@@ -1,0 +1,26 @@
+<section>
+    <p *ngIf="!noteExist">Crea tu primera nota!!</p>
+  
+    <form class="note-form" (ngSubmit)="addNote()">
+        <label for="title">Título:</label>
+        <input type="text" id="title" [(ngModel)]="note.title" name="title" required />
+  
+        <label for="desc">Descripción:</label>
+        <textarea id="desc" [(ngModel)]="note.desc" name="desc" required></textarea>
+  
+        <label for="date">Fecha:</label>
+        <input type="date" [(ngModel)]="note.date" id = "date" name="date" required />
+  
+        <button type="submit" [disabled]="!note.title || !note.desc || !note.date">Añadir Nota</button>
+    </form>
+  
+    <div class="notes">
+      @for (note of notes; track note.id) {
+        <div class="note-card">
+          <h3>{{ note.title }}</h3>
+          <p>{{ note.desc }}</p>
+          <small>{{ note.date }}</small>
+        </div>
+      }
+    </div>
+</section>

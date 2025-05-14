@@ -1,0 +1,6 @@
+TODO de Angular:
+-Creacion IU sencilla.
+-Creacion de Añadir Notas
+-Base de Datos??
+-Eliminar Notas
+-Editar Notas
