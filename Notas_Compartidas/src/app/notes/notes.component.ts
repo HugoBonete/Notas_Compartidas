@@ -53,4 +53,13 @@ export class NotesComponent {
     }
     )
   }
+
+  deleteNote(id : number):void
+  {
+    let index = this.notes.findIndex(note => note.id == id);
+    if(index !== -1)
+    {
+      this.notes.splice(index, 1);
+    }
+  }
 }

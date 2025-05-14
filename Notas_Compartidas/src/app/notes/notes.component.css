@@ -3,8 +3,8 @@ section {
     flex-direction: column;
     align-items: center;
     margin: 40px auto;
-    padding: 0 20px;
-    max-width: 1200px;
+    padding: 0 10px;
+    max-width: 1500px;
     font-family: Arial, sans-serif;
   }
   
@@ -85,6 +85,14 @@ section {
     font-size: 1.2em;
     color: #222;
   }
+
+  .delete {
+    color: red;
+  }
+
+  .delete:hover {
+    cursor: pointer;
+  }
   
   .note-card p {
     flex-grow: 1;
@@ -92,7 +100,7 @@ section {
     color: #444;
   }
   
-  .note-card small {
+  .date {
     color: #777;
     font-size: 0.85em;
     align-self: flex-end;
