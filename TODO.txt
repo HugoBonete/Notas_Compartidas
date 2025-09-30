@@ -1,5 +1,4 @@
 TODO de Angular:
 -Base de Datos??
--Eliminar Notas
 -Editar Notas
 -Buscar Notas
